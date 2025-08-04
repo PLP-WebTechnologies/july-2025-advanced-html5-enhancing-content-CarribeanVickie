@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="An HTML5 page showcasing lists, tables, media, and a fully featured form with built-in validation." />
+  <title>WEBDEV ASSIGNMENT 2</title>
+</head>
+<body>
+
+  <header>
+    <h1>HTML5 Enhanced Content & Form Demo</h1>
+    <p>This page demonstrates the use of HTML5 lists, tables, media, and a validated form.</p>
+  </header>
+
+  <main>
+
+    <!-- Section: Lists -->
+    <section>
+        <h2>Types of HTML Lists</h2>
+
+        <h3>1. Ordered List (Steps to Learn HTML)</h3>
+        <ol>
+            <li>Understand basic tags</li>
+            <li>Practice writing simple pages</li>
+            <li>Learn about semantics</li>
+            <li>Structure content using sections</li>
+        </ol>
+
+        <h3>2. Unordered List (HTML Topics)</h3>
+        <ul>
+            <li>Elements</li>
+            <li>Attributes</li>
+            <li>Forms</li>
+            <li>Media</li>
+        </ul>
+
+        <h3>3. Nested List (Topics & Subtopics)</h3>
+        <ul>
+            <li>Frontend
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+            </ul>
+            </li>
+            <li>Backend
+            <ul>
+                <li>Python</li>
+                <li>Node.js</li>
+            </ul>
+            </li>
+        </ul>
+
+        <h3>4. Definition List</h3>
+        <dl>
+            <dt>HTML</dt>
+            <dd>A markup language used to create web pages.</dd>
+            <dt>CSS</dt>
+            <dd>Styles the layout and appearance of HTML elements.</dd>
+            <dt>JavaScript</dt>
+            <dd>A scripting language used to create interactive web features.</dd>
+        </dl>
+    </section>
+
+    <!-- Section: Table -->
+    <section>
+      <h2>Course Schedule</h2>
+      <table border="1">
+        <caption>Weekly Coding Bootcamp Schedule</caption>
+        <thead>
+          <tr>
+            <th>Day</th>
+            <th>Topic</th>
+            <th>Duration</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Monday</td>
+            <td>HTML & Accessibility</td>
+            <td>2 hours</td>
+          </tr>
+          <tr>
+            <td>Tuesday</td>
+            <td>CSS Fundamentals</td>
+            <td>3 hours</td>
+          </tr>
+          <tr>
+            <td>Wednesday</td>
+            <td>JavaScript Basics</td>
+            <td>3 hours</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Section: Media -->
+    <section>
+      <h2>Media Showcase</h2>
+
+      <h3>Image</h3>
+      <img src="https://images.pexels.com/photos/847393/pexels-photo-847393.jpeg" alt="Placeholder Image" width="400" height="300">
+
+      <h3>Audio</h3>
+      <audio controls>
+        <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+
+      <h3>Video</h3>
+      <video width="320" height="240" controls>
+        <source src="https://www.w3schools.com/html/movie.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </section>
+
+    <!-- Section: HTML Form -->
+    <section>
+      <h2>SIGN UP FORM</h2>
+
+      <form action="#" method="post">
+
+        <fieldset>
+          <legend><strong> PERSONAL INFORMATION </strong></legend>
+
+          <label for="name">Full Name:</label>
+          <input type="text" id="name" name="name" required minlength="3" placeholder="John Doe"><br><br>
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required placeholder="example@email.com"><br><br>
+
+          <label for="dob">Date of Birth:</label>
+          <input type="date" id="dob" name="dob" required><br><br>
+        </fieldset>
+
+        <fieldset>
+          <legend><strong> ACCOUNT DETAILS ... </strong></legend>
+
+          <label for="username">Username:</label>
+          <input type="text" id="username" name="username" required pattern="[A-Za-z0-9]{4,}" title="At least 4 alphanumeric characters" autocomplete="username"><br><br>
+
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required minlength="6" autocomplete="new-password"><br><br>
+
+          <label for="confirm-password">Confirm Password:</label>
+          <input type="password" id="confirm-password" name="confirm-password" required minlength="6"><br><br>
+        </fieldset>
+
+        <fieldset>
+          <legend><strong> PREFERENCES ... </strong></legend>
+
+          <p>Subscribe to newsletter?</p>
+          <label><input type="radio" name="subscribe" value="yes" required> Yes</label>
+          <label><input type="radio" name="subscribe" value="no"> No</label><br><br>
+
+          <p>Select your skills:</p>
+          <label><input type="checkbox" name="skills" value="html"> HTML</label>
+          <label><input type="checkbox" name="skills" value="css"> CSS</label>
+          <label><input type="checkbox" name="skills" value="python"> Python</label><br><br>
+
+          <label for="country">Country:</label>
+          <select id="country" name="country" required>
+            <option value="">--Select--</option>
+            <option value="kenya">Kenya</option>
+            <option value="nigeria">Nigeria</option>
+            <option value="ghana">Ghana</option>
+          </select><br><br>
+        </fieldset>
+
+        <fieldset>
+          <legend><strong> OTHERS ... </strong></legend>
+          <label for="bio">Short Bio:</label><br>
+          <textarea id="bio" name="bio" rows="4" cols="50" placeholder="Tell us a little about yourself..." minlength="10" maxlength="200"></textarea><br><br>
+
+          <label for="readonly-field">Referral Code (readonly):</label>
+          <input type="text" id="readonly-field" value="STU2025" readonly><br><br>
+        </fieldset>
+
+        <button type="submit">Submit</button>
+
+      </form>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 WebDev Assignment 2</p>
+  </footer>
+
+</body>
+</html>
